@@ -1,0 +1,169 @@
+
+
+isTest=false&multi_data=1&cmd=blc_wan_mode%2Cwan1_ip%2Cwan1_gw%2Cwan1_ipv6_interface_id%2Cwan1_ipv6_gw%2Cpdp_type%2C+pdp_act_type1%2Cwan1_pridns%2Cwan1_secdns%2Cwan1_secdns%2Cwan1_ipv6_pridns_auto%2Cwan1_ipv6_secdns_auto%2Cwan1_ipv6_pridns_auto%2Cipv6_fake_subnet%2Cwan1_ipv6_ip%2Cwan_netmask%2Clan_ipaddr%2Cipv6_lan_ipaddr%2Clan_netmask%2Cgmac_addr%2Cproduct_model_prefix%2Cwifi_mac%2CdhcpEnabled%2Cppp_status%2Cethwan_mode%2Clanconnectstatue&_=1684804585115
+
+isTest: false
+multi_data: 1
+cmd: blc_wan_mode,wan1_ip,wan1_gw,wan1_ipv6_interface_id,wan1_ipv6_gw,pdp_type, pdp_act_type1,wan1_pridns,wan1_secdns,wan1_secdns,wan1_ipv6_pridns_auto,wan1_ipv6_secdns_auto,wan1_ipv6_pridns_auto,ipv6_fake_subnet,wan1_ipv6_ip,wan_netmask,lan_ipaddr,ipv6_lan_ipaddr,lan_netmask,gmac_addr,product_model_prefix,wifi_mac,dhcpEnabled,ppp_status,ethwan_mode,lanconnectstatue
+_: 1684804585115
+
+
+# params
+
+product_model_prefix
+lan_ipaddr
+lan_netmask
+wan1_gw
+wan1_ip
+wan1_pridns
+wan1_secdns
+wan_netmask
+loginfo
+modem_main_state "modem_init_complete" parse and check
+monthly_rx_bytes
+monthly_time
+monthly_tx_bytes
+network_provider
+network_type
+ppp_status
+realtime_rx_bytes
+realtime_rx_thrpt
+realtime_time
+realtime_tx_bytes
+realtime_tx_thrpt
+roam_setting_option
+signalbar
+simcard_roam
+sms_received_flag
+sms_unread_num
+sub_network_type
+web_version
+zgmr_ver
+mcc "MCC y MNC, son las siglas en inglés de Mobile Country Code y Mobile Network Code, son dos códigos numéricos usados conjuntamente para identificar el país y los operadores de telefonía móvil que utilizan ya sea GSM, CDMA, UMTS, LTE y ciertas redes satelitales." label
+mnc "MCC y MNC, son las siglas en inglés de Mobile Country Code y Mobile Network Code, son dos códigos numéricos usados conjuntamente para identificar el país y los operadores de telefonía móvil que utilizan ya sea GSM, CDMA, UMTS, LTE y ciertas redes satelitales." label
+sms_capacity_info
+cpin
+creg_stat
+cereg_stat
+ipv6_wan_apn
+nv_arfcn "Current Access EARFCN In GSM cellular networks, an absolute radio-frequency channel number (ARFCN) is a code that specifies a pair of physical radio carriers used for transmission and reception in a land mobile radio system, one for the uplink signal and one for the downlink signal."" label
+nv_band "GSM band" label
+nv_bandwidth
+nv_cellid
+nv_enodbid
+nv_globecellid
+nv_pci "Current registration Cell PCI" label
+nv_rsrp "DATA RSRP (potencia recibida de la señal de referencia), es una medida de la potencia de la señal de radio recibida por un dispositivo móvil desde una torre celular específica en una red celular.""
+nv_rsrq "DATA RSRQ (Calidad de señal recibida de referencia): caracteriza la calidad de las señales piloto recibidas. El valor RSRQ se mide en dB (dB)."
+nv_sinr "DATA SINR (interferencia de señal + relación de ruido) también llamado CINR (portador a interferencia + relación de ruido) es la relación del nivel de señal al nivel de ruido (o simplemente la relación de señal a ruido). El valor SINR se mide en dB (dB). Es simple: cuanto mayor sea el valor, mejor será la calidad de la señal. Con valores SINR inferiores a 0, la velocidad de conexión será muy baja, ya que esto significa que hay más ruido en la señal recibida que la parte útil, y también existe la probabilidad de perder una conexión LTE."
+pdp_type label
+ppp_status "ppp_connected" DATA
+product_name label
+wan_apn label 
+flash_rest "87.8M"
+flash_total "105.0M"
+nv_loadavg "0.49"
+ram_rest "23.6M"
+ram_total "54.7M"
+ram_used "56.9%"
+
+imei label
+imsi label
+lte_rsrp
+msisdn "+5493517881416" label
+rssi
+sim_imsi
+sim_imsi "722010110125237"
+sta_ip_status "disconnect"
+static_wan_ipaddr "0.0.0.0"
+sub_network_type "FDD_LTE"
+wan_ipaddr ""
+cr_version
+hardware_version
+ziccid "8954010611101252379"
+
+pin_status "0"
+
+
+
+
+
+product_model_prefix%2Clan_ipaddr%2Clan_netmask%2Cwan1_gw%2Cwan1_ip%2Cwan1_pridns%2Cwan1_secdns%2Cwan_netmask%2Cloginfo%2Cmodem_main_state%2Cmonthly_rx_bytes%2Cmonthly_time%2Cmonthly_tx_bytes%2Cnetwork_provider%2Cnetwork_type%2Cppp_status%2Crealtime_rx_bytes%2Crealtime_rx_thrpt%2Crealtime_time%2Crealtime_tx_bytes%2Crealtime_tx_thrpt%2Croam_setting_option%2Csignalbar%2Csimcard_roam%2Csms_received_flag%2Csms_unread_num%2Csub_network_type%2Cweb_version%2Czgmr_ver%2Cmcc %2Cmnc %2Csms_capacity_info%2Ccpin%2Ccreg_stat%2Ccereg_stat%2Cipv6_wan_apn%2Cnv_arfcn %2Cnv_band %2Cnv_bandwidth%2Cnv_cellid%2Cnv_enodbid%2Cnv_globecellid%2Cnv_pci %2Cnv_rsrp %2Cnv_rsrq %2Cnv_sinr %2Cppp_status %2Cproduct_name %2Cwan_apn %2Cflash_rest%2Cflash_total%2Cnv_loadavg%2Cram_rest%2Cram_total%2Cram_used%2Cimei%2Cimsi%2Clte_rsrp%2Cmsisdn%2Crssi%2Csim_imsi%2Csim_imsi%2Csta_ip_status%2Cstatic_wan_ipaddr%2Csub_network_type%2Cwan_ipaddr%2Ccr_version%2Chardware_version%2Cziccid%2Cpin_status
+
+
+curl 'http://192.168.150.1/goform/goform_get_cmd_process?isTest=false&cmd=product_model_prefix%2Clan_ipaddr%2Clan_netmask%2Cwan1_gw%2Cwan1_ip%2Cwan1_pridns%2Cwan1_secdns%2Cwan_netmask%2Cmodem_main_state%2Cmonthly_rx_bytes%2Cmonthly_time%2Cmonthly_tx_bytes%2Cnetwork_provider%2Cnetwork_type%2Cppp_status%2Crealtime_rx_bytes%2Crealtime_rx_thrpt%2Crealtime_time%2Crealtime_tx_bytes%2Crealtime_tx_thrpt%2Croam_setting_option%2Csignalbar%2Csimcard_roam%2Csms_unread_num%2Csub_network_type%2Cweb_version%2Czgmr_ver%2Cmcc%2Cmnc%2Ccpin%2Ccreg_stat%2Ccereg_stat%2Cipv6_wan_apn%2Cnv_arfcn%2Cnv_band%2Cnv_bandwidth%2Cnv_cellid%2Cnv_enodbid%2Cnv_globecellid%2Cnv_pci%2Cnv_rsrp%2Cnv_rsrq%2Cnv_sinr%2Cppp_status%2Cproduct_name%2Cwan_apn%2Cflash_rest%2Cflash_total%2Cnv_loadavg%2Cram_rest%2Cram_total%2Cram_used%2Cimei%2Clte_rsrp%2Cmsisdn%2Crssi%2Csim_imsi%2Csim_imsi%2Csub_network_type%2Cwan_ipaddr%2Ccr_version%2Chardware_version%2Cziccid%2Cpin_status&multi_data=1&_=1684807184960' \
+  -H 'Accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'Accept-Language: en-US,en' \
+  -H 'Connection: keep-alive' \
+  -H 'Referer: http://192.168.150.1/index.html' \
+  -H 'Sec-GPC: 1' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  --compressed \
+  --insecure | jq
+
+
+  {
+  "product_model_prefix": "WR11S",
+  "lan_ipaddr": "192.168.150.1",
+  "lan_netmask": "255.255.255.0",
+  "wan1_gw": "100.95.131.63",
+  "wan1_ip": "100.95.131.63",
+  "wan1_pridns": "186.130.129.249",
+  "wan1_secdns": "186.130.128.249",
+  "wan_netmask": "255.0.0.0",
+  "loginfo": "ok",
+  "modem_main_state": "modem_init_complete",
+  "monthly_rx_bytes": "741412792",
+  "monthly_time": "1896708",
+  "monthly_tx_bytes": "674160491",
+  "network_provider": "72207",
+  "network_type": "LTE",
+  "ppp_status": "ppp_connected",
+  "realtime_rx_bytes": "7286249",
+  "realtime_rx_thrpt": "973",
+  "realtime_time": "1476",
+  "realtime_tx_bytes": "4203396",
+  "realtime_tx_thrpt": "129",
+  "roam_setting_option": "on",
+  "signalbar": "4",
+  "simcard_roam": "Home",
+  "sms_unread_num": "0",
+  "sub_network_type": "FDD_LTE",
+  "web_version": "WR11S_V1.1.9",
+  "zgmr_ver": "7520V3SCV2.01.01.02P16U04",
+  "mcc": "722",
+  "mnc": "07",
+  "cpin": "READY",
+  "creg_stat": "1",
+  "cereg_stat": "1",
+  "ipv6_wan_apn": "internet.personal.com",
+  "nv_arfcn": "9260",
+  "nv_band": "28",
+  "nv_bandwidth": "1",
+  "nv_cellid": "3",
+  "nv_enodbid": "948405",
+  "nv_globecellid": "242791683",
+  "nv_pci": "157",
+  "nv_rsrp": "41",
+  "nv_rsrq": "21",
+  "nv_sinr": "7",
+  "product_name": "CE11S",
+  "wan_apn": "internet.personal.com",
+  "flash_rest": "87.8M",
+  "flash_total": "105.0M",
+  "nv_loadavg": "0.49",
+  "ram_rest": "24.1M",
+  "ram_total": "54.7M",
+  "ram_used": "55.9%",
+  "imei": "865190049991840",
+  "lte_rsrp": "-100",
+  "msisdn": "+5493517881416",
+  "rssi": "-100",
+  "sim_imsi": "722010110125237",
+  "wan_ipaddr": "100.95.131.63",
+  "cr_version": "WR11S_XHS_6ATX0X_T1_37012",
+  "hardware_version": "WR11S_V6.0",
+  "ziccid": "8954010611101252379",
+  "pin_status": "0"
+}
