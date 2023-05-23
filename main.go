@@ -14,22 +14,16 @@ type LoginState struct {
 	Result int `json:"result,string"`
 }
 
-func login() error {
-	username := os.Getenv("WR11_USER")
-	password := os.Getenv("WR11_PASSWORD")
+func login(base_url string, username string, password string) error {
 
 	// Check if the username and password are empty
 	if username == "" || password == "" {
-		return fmt.Errorf("username or password not provided")
+		return fmt.Errorf("username or password not provided,not all data will be available to the exporter without loging in")
 	}
 
 	// Encode the username and password as base64
 	encodedUsername := base64.URLEncoding.EncodeToString([]byte(username))
 	encodedPassword := base64.URLEncoding.EncodeToString([]byte(password))
-	fmt.Println(username)
-	fmt.Println(password)
-	fmt.Println(encodedUsername)
-	fmt.Println(encodedPassword)
 
 	// Create the form data with the encoded username and password
 	formData := url.Values{}
@@ -37,9 +31,9 @@ func login() error {
 	formData.Set("goformId", "LOGIN")
 	formData.Set("username", encodedUsername)
 	formData.Set("password", encodedPassword)
-
+	loginFormUrl := fmt.Sprintf("%s/goform/goform_set_cmd_process", base_url)
 	// Make a POST request to the login endpoint
-	resp, err := http.PostForm("http://192.168.150.1/goform/goform_set_cmd_process", formData)
+	resp, err := http.PostForm(loginFormUrl, formData)
 	if err != nil {
 		return fmt.Errorf("error making login request: %w", err)
 	}
@@ -50,21 +44,27 @@ func login() error {
 	if err != nil {
 		return fmt.Errorf("error reading response body: %w", err)
 	}
-	fmt.Println(string(body))
 
 	var loginState LoginState
 	err = json.Unmarshal(body, &loginState)
 	if err != nil {
 		return fmt.Errorf("error parsing JSON: %w", err)
 	}
-	fmt.Println(loginState.Result)
-
-	return nil
+	if loginState.Result == 0 {
+		return nil
+	} else {
+		return fmt.Errorf("error loging in with result %v, not all data will be available to the exporter without loging in", loginState.Result)
+	}
 }
 
 func main() {
-	err := login()
+	username := os.Getenv("WR11_USER")
+	password := os.Getenv("WR11_PASSWORD")
+	url := "http://192.168.150.1"
+	err := login(url, username, password)
 	if err != nil {
 		fmt.Println("Login failed:", err)
+	} else {
+		fmt.Println("Login succeded")
 	}
 }
