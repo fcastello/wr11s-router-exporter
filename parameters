@@ -25,7 +25,7 @@ monthly_time
 monthly_tx_bytes
 network_provider
 network_type
-ppp_status
+ppp_status CONNECTION STATUS
 realtime_rx_bytes
 realtime_rx_thrpt
 realtime_time
@@ -42,7 +42,7 @@ zgmr_ver
 mcc "MCC y MNC, son las siglas en inglés de Mobile Country Code y Mobile Network Code, son dos códigos numéricos usados conjuntamente para identificar el país y los operadores de telefonía móvil que utilizan ya sea GSM, CDMA, UMTS, LTE y ciertas redes satelitales." label
 mnc "MCC y MNC, son las siglas en inglés de Mobile Country Code y Mobile Network Code, son dos códigos numéricos usados conjuntamente para identificar el país y los operadores de telefonía móvil que utilizan ya sea GSM, CDMA, UMTS, LTE y ciertas redes satelitales." label
 sms_capacity_info
-cpin
+cpin CHECK FOR SIM READY OR NOT know options READY, NO SIM
 creg_stat
 cereg_stat
 ipv6_wan_apn
