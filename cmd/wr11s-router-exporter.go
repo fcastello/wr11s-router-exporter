@@ -4,6 +4,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	log "github.com/sirupsen/logrus"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -58,13 +59,17 @@ func login(base_url string, username string, password string) error {
 }
 
 func main() {
+	log.SetFormatter(&log.TextFormatter{})
+	log.SetOutput(os.Stdout)
+	log.SetLevel(log.InfoLevel)
+
 	username := os.Getenv("WR11_USER")
 	password := os.Getenv("WR11_PASSWORD")
 	url := "http://192.168.150.1"
 	err := login(url, username, password)
 	if err != nil {
-		fmt.Println("Login failed:", err)
+		log.Println("Login failed:", err)
 	} else {
-		fmt.Println("Login succeded")
+		log.Println("Login succeded")
 	}
 }
