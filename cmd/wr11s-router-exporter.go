@@ -4,6 +4,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"github.com/fcastello/wr11s-router-exporter/pkg/config"
 	log "github.com/sirupsen/logrus"
 	"io/ioutil"
 	"net/http"
@@ -59,14 +60,23 @@ func login(base_url string, username string, password string) error {
 }
 
 func main() {
-	log.SetFormatter(&log.TextFormatter{})
-	log.SetOutput(os.Stdout)
-	log.SetLevel(log.InfoLevel)
+	// Initialize logger
+	logger := log.New()
 
-	username := os.Getenv("WR11_USER")
-	password := os.Getenv("WR11_PASSWORD")
-	url := "http://192.168.150.1"
-	err := login(url, username, password)
+	// Set log level (optional)
+	logger.SetLevel(log.InfoLevel)
+	//Set Logging Options
+
+	logger.SetFormatter(&log.TextFormatter{})
+	logger.SetOutput(os.Stdout)
+	logger.SetLevel(log.InfoLevel)
+	// Load configuration
+	cfg, err := config.LoadConfig(logger)
+	if err != nil {
+		logger.WithError(err).Fatal("Failed to load configuration")
+	}
+
+	err := login(cfg.Address, cfg.Username, cfg.Password)
 	if err != nil {
 		log.Println("Login failed:", err)
 	} else {
