@@ -71,12 +71,12 @@ func main() {
 	logger.SetOutput(os.Stdout)
 	logger.SetLevel(log.InfoLevel)
 	// Load configuration
-	cfg, err := config.LoadConfig(logger)
+	cfg, err := config.LoadConfig()
 	if err != nil {
 		logger.WithError(err).Fatal("Failed to load configuration")
 	}
 
-	err := login(cfg.Address, cfg.Username, cfg.Password)
+	err = login(cfg.Address, cfg.Username, cfg.Password)
 	if err != nil {
 		log.Println("Login failed:", err)
 	} else {
